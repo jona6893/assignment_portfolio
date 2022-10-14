@@ -32,6 +32,7 @@ h1 {
   line-height: 1.3;
    margin-top: 0;
   font-size: 3.052rem;
+  
 }
 
 h2 {
@@ -226,6 +227,8 @@ h3 {
 .box3 a {
   margin: 0%;
   opacity: 0%;
+  font-size: 2.441rem;
+  text-align: center;
 }
 .box1:hover,
 .box2:hover,
@@ -264,3 +267,58 @@ p {
 .content3 h2 {
   color: var(--orange) !important;
 }
+
+
+@media (max-width:884px) {
+    h1{
+          font-size: 1.802rem;
+    }
+
+    h2{
+        font-size: 1.602rem;
+    }
+    h3{
+        font-size: 1.424rem;
+    }
+    h4 {font-size: 1.266rem;}
+    p{font-size: 0.889rem;}
+    #head{
+        display: none;
+    }
+    .header_image1, .header_image2, .header_image3, #learnt{
+        width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    }
+    section div{
+        grid-column: 1 !important;
+    }
+    .content1{
+        width: 90%;
+        gap: 0%;
+    }
+    .content2{
+        width: 100%;
+    }
+    
+    .content3{
+        width: 90%;
+    }
+    .box1 a, .box2 a, .box3 a{
+        margin: 0%;
+    opacity: 1;
+    background: #00000099;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.602rem;
+        text-align: center;
+    }
+} 

@@ -16,6 +16,12 @@ body{
 section{
     margin-bottom: 0%;
 }
+button{
+    width: 10rem;
+    height: 3rem;
+    background-color: var(--orange);
+    color: var(--black);
+}
 h1, h2, h3, h4, p, a{
     font-family: 'Mingzat', sans-serif;
   font-weight: 400;
@@ -48,27 +54,27 @@ header{
     gap: 1rem;
 }
 
-header button{
-    background-color: var(--orange);
-    width: 8rem;
-    height: 2rem;
-    margin: 0%;
-    padding: 0%;
-}
 header a{
     color: var(--black);
+   display: flex;
+gap: 1rem;
+    align-items: center;
+    padding-inline: 1rem;
 }
 header h1{
     margin: 0%;
+    text-align: center;
 }
 main{
     padding: 0% !important;
+    max-width: 1800px;
+    margin: auto;
 }
 
 /** ---------- Mockups ---------- */
 
 #mockups{
-    background-image: url(images/project1-mockup.webp);
+    background-image: url(images/project3-mockup.webp);
     background-position:50%;
     background-size: cover;
     width: 100%;
@@ -101,7 +107,7 @@ main{
 }
 
 .visualImage{
-    background-image: url(images/project1.webp);
+    background-image: url(images/project3.webp);
     background-size: cover;
     background-position:50%;
     width: 100%;
@@ -120,7 +126,7 @@ main{
 
 .stimage{
     width: 100%;
-    background-image: url(images/project1-mockup.webp);
+    background-image: url(images/project3-mockup.webp);
     background-position:50%;
     background-size: cover;
 }
@@ -152,4 +158,28 @@ footer h3{
 footer h4{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+@media (max-width:884px){
+
+    h1 {
+  margin-top: 0;
+  font-size: 1.802rem;
+}
+    h2 {font-size: 1.602rem;}
+
+h3 {font-size: 1.424rem;}
+
+h4 {font-size: 1.266rem;}
+
+h5 {font-size: 1.125rem;}
+p{font-size: 0.889rem;}
+
+
+}
+
+@media (max-width:599px){
+
+    .stimage{
+        order: 1;
+    }
 }
