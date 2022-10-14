@@ -38,71 +38,104 @@ let sequence3 = [
   [text3, { transform: "scale(1.2)", color: "var(--orange)" }],
 ];
 
-//* Content of Each Section when scrolling to the corrent sections
+let windowWidth;
 
-scroll(animate(content1, { opacity: [0, 1, 1, 0] }), {
-  target: content1,
-  offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+document.addEventListener("DOMContentLoaded", () =>{
+  ready()
 });
-scroll(animate(content2, { opacity: [0, 1, 1, 0] }), {
-  target: content2,
-  offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
-});
-scroll(animate(content3, { opacity: [0, 1, 1, 0] }), {
-  target: content3,
-  offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
-});
-scroll(animate(content4, { opacity: [0, 1, 1, 0] }), {
-  target: content4,
-  offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
-})
 
 
 
+function ready() {
 
-//* MenuOptions when scrolling to the corrent sections
+  
+  // checks of on mobile or desktop
+  if (window.innerWidth > 884) {
+    console.log("window is larger");
+    //* Content of Each Section when scrolling to the corrent sections
 
-scroll(
-  animate(text1, {
-    transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
-    color: ["var(--white)", "var(--orange)", "var(--orange)", "var(--white)"],
-  }),
-  {
-    target: content1,
-    offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+    scroll(animate(content1, { opacity: [0, 1, 1, 0] }), {
+      target: content1,
+      offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+    });
+    scroll(animate(content2, { opacity: [0, 1, 1, 0] }), {
+      target: content2,
+      offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+    });
+    scroll(animate(content3, { opacity: [0, 1, 1, 0] }), {
+      target: content3,
+      offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+    });
+    scroll(animate(content4, { opacity: [0, 1, 1, 0] }), {
+      target: content4,
+      offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+    });
+
+    //* MenuOptions when scrolling to the corrent sections
+
+    scroll(
+      animate(text1, {
+        transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+        color: [
+          "var(--white)",
+          "var(--orange)",
+          "var(--orange)",
+          "var(--white)",
+        ],
+      }),
+      {
+        target: content1,
+        offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+      }
+    );
+    scroll(
+      animate(text2, {
+        transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+        color: [
+          "var(--white)",
+          "var(--orange)",
+          "var(--orange)",
+          "var(--white)",
+        ],
+      }),
+      {
+        target: content2,
+        offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+      }
+    );
+    scroll(
+      animate(text3, {
+        transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+        color: [
+          "var(--white)",
+          "var(--orange)",
+          "var(--orange)",
+          "var(--white)",
+        ],
+      }),
+      {
+        target: content3,
+        offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+      }
+    );
+    scroll(
+      animate(text4, {
+        transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+        color: [
+          "var(--white)",
+          "var(--orange)",
+          "var(--orange)",
+          "var(--white)",
+        ],
+      }),
+      {
+        target: content4,
+        offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+      }
+    );
+  } else {
+    scroll(animate(".progress", { scaleX: [0, 1] }));
+    console.log("on mobile");
   }
-);
-scroll(
-  animate(text2, {
-    transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
-    color: ["var(--white)", "var(--orange)", "var(--orange)", "var(--white)"],
-  }),
-  {
-    target: content2,
-    offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
-  }
-);
-scroll(
-  animate(text3, {
-    transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
-    color: ["var(--white)", "var(--orange)", "var(--orange)", "var(--white)"],
-  }),
-  {
-    target: content3,
-    offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
-  }
-);
-scroll(
-  animate(text4, {
-    transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
-    color: ["var(--white)", "var(--orange)", "var(--orange)", "var(--white)"],
-  }),
-  {
-    target: content4,
-    offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
-  }
-);
-
-
-
+}
 
