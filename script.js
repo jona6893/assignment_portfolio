@@ -1,0 +1,108 @@
+"use strict";
+import {
+  animate,
+  scroll,
+  timeline,
+  inView,
+  ScrollOffset,
+} from "https://cdn.skypack.dev/motion";
+
+const header1 = document.querySelector(".header_image1");
+const header2 = document.querySelector(".header_image2");
+const header3 = document.querySelector(".header_image3");
+const header4 = document.querySelector("#learnt");
+const text1 = document.querySelector(".text1");
+const text2 = document.querySelector(".text2");
+const text3 = document.querySelector(".text3");
+const text4 = document.querySelector(".text4");
+const content1 = document.querySelector(".content1");
+const content2 = document.querySelector(".content2");
+const content3 = document.querySelector(".content3");
+const content4 = document.querySelector(".content4");
+
+
+let sequence1 = [
+  [text1, { transform: "scale(1.2)", color: "var(--orange)" }],
+  [text2, { transform: "scale(1)", color: "var(--white)" }],
+  [text3, { transform: "scale(1)", color: "var(--white)" }],
+];
+let sequence2 = [
+  [text1, { transform: "scale(1)", color: "var(--white)" }],
+  [text2, { transform: "scale(1.2)", color: "var(--orange)" }],
+  [text3, { transform: "scale(1)", color: "var(--white)" }],
+
+];
+let sequence3 = [
+  [text1, { transform: "scale(1)", color: "var(--white)" }],
+  [text2, { transform: "scale(1)", color: "var(--white)" }],
+  [text3, { transform: "scale(1.2)", color: "var(--orange)" }],
+];
+
+//* Content of Each Section when scrolling to the corrent sections
+
+scroll(animate(content1, { opacity: [0, 1, 1, 0] }), {
+  target: content1,
+  offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+});
+scroll(animate(content2, { opacity: [0, 1, 1, 0] }), {
+  target: content2,
+  offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+});
+scroll(animate(content3, { opacity: [0, 1, 1, 0] }), {
+  target: content3,
+  offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+});
+scroll(animate(content4, { opacity: [0, 1, 1, 0] }), {
+  target: content4,
+  offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+})
+
+
+
+
+//* MenuOptions when scrolling to the corrent sections
+
+scroll(
+  animate(text1, {
+    transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+    color: ["var(--white)", "var(--orange)", "var(--orange)", "var(--white)"],
+  }),
+  {
+    target: content1,
+    offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+  }
+);
+scroll(
+  animate(text2, {
+    transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+    color: ["var(--white)", "var(--orange)", "var(--orange)", "var(--white)"],
+  }),
+  {
+    target: content2,
+    offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+  }
+);
+scroll(
+  animate(text3, {
+    transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+    color: ["var(--white)", "var(--orange)", "var(--orange)", "var(--white)"],
+  }),
+  {
+    target: content3,
+    offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+  }
+);
+scroll(
+  animate(text4, {
+    transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+    color: ["var(--white)", "var(--orange)", "var(--orange)", "var(--white)"],
+  }),
+  {
+    target: content4,
+    offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+  }
+);
+
+
+
+
