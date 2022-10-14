@@ -75,7 +75,7 @@ function ready() {
 
     scroll(
       animate(text1, {
-        transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+        transform: ["scale(1)", "scale(1.08)", "scale(1.08)", "scale(1)"],
         color: [
           "var(--white)",
           "var(--orange)",
@@ -90,7 +90,7 @@ function ready() {
     );
     scroll(
       animate(text2, {
-        transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+        transform: ["scale(1)", "scale(1.08)", "scale(1.08)", "scale(1)"],
         color: [
           "var(--white)",
           "var(--orange)",
@@ -105,7 +105,7 @@ function ready() {
     );
     scroll(
       animate(text3, {
-        transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+        transform: ["scale(1)", "scale(1.08)", "scale(1.08)", "scale(1)"],
         color: [
           "var(--white)",
           "var(--orange)",
@@ -120,7 +120,7 @@ function ready() {
     );
     scroll(
       animate(text4, {
-        transform: ["scale(1)", "scale(1.1)", "scale(1.1)", "scale(1)"],
+        transform: ["scale(1)", "scale(1.08)", "scale(1.08)", "scale(1)"],
         color: [
           "var(--white)",
           "var(--orange)",
@@ -133,9 +133,111 @@ function ready() {
         offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
       }
     );
+    
+
+    const socialFloat = document.querySelector("#head");
+    const footer = document.querySelector("footer");
+
+    function checkOffset() {
+      console.log("change fixed to absolute")
+      function getRectTop(el) {
+        var rect = el.getBoundingClientRect();
+        return rect.top;
+      }
+
+      if (
+        getRectTop(socialFloat) +
+          document.body.scrollTop +
+          socialFloat.offsetHeight >=
+        getRectTop(footer) + document.body.scrollTop - 10
+      ) {
+        socialFloat.style.position = "absolute";
+        socialFloat.style.top = "300%";}
+      if (
+        document.body.scrollTop + window.innerHeight <
+        getRectTop(footer) + document.body.scrollTop
+      ) {
+        socialFloat.style.position = "fixed"; // restore when you scroll up
+        socialFloat.style.top = "0";}
+      //socialFloat.innerHTML = document.body.scrollTop + window.innerHeight;
+    }
+
+    document.addEventListener("scroll", function () {
+      checkOffset();
+    });
+
+
+
   } else {
     scroll(animate(".progress", { scaleX: [0, 1] }));
     console.log("on mobile");
+
+    //* MenuOptions when scrolling to the corrent sections
+
+    scroll(
+      animate(text1, {
+        transform: ["scale(0.7)", "scale(1.08)", "scale(1.08)", "scale(0.7)"],
+        color: [
+          "var(--white)",
+          "var(--orange)",
+          "var(--orange)",
+          "var(--white)",
+        ],
+      }),
+      {
+        target: content1,
+        offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+      }
+    );
+    scroll(
+      animate(text2, {
+        transform: ["scale(0.7)", "scale(1.08)", "scale(1.08)", "scale(0.7)"],
+        color: [
+          "var(--white)",
+          "var(--orange)",
+          "var(--orange)",
+          "var(--white)",
+        ],
+      }),
+      {
+        target: content2,
+        offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+      }
+    );
+    scroll(
+      animate(text3, {
+        transform: ["scale(0.7)", "scale(1.08)", "scale(1.08)", "scale(0.7)"],
+        color: [
+          "var(--white)",
+          "var(--orange)",
+          "var(--orange)",
+          "var(--white)",
+        ],
+      }),
+      {
+        target: content3,
+        offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+      }
+    );
+    scroll(
+      animate(text4, {
+        transform: ["scale(0.7)", "scale(1.08)", "scale(1.08)", "scale(0.7)"],
+        color: [
+          "var(--white)",
+          "var(--orange)",
+          "var(--orange)",
+          "var(--white)",
+        ],
+      }),
+      {
+        target: content4,
+        offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
+      }
+    );
   }
+
+
+
+
 }
 

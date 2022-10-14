@@ -267,8 +267,24 @@ p {
 .content3 h2 {
   color: var(--orange) !important;
 }
+
+.content3 button{
+    background-color: var(--orange);
+    border: none;
+    color: var(--black);
+}
+
 .progress {
   display: none;
+}
+
+footer{
+    scroll-snap-align: start;
+}
+footer p, h4{
+    margin: 0%;
+    margin-bottom: 1rem;
+   color: var(--white) !important;
 }
 
 @media (max-width: 884px) {
@@ -289,8 +305,21 @@ p {
     font-size: 0.889rem;
   }
   #head {
-    display: none;
+    display: block;
+    z-index: 100;
   }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--black);
+    gap: 0rem;
+    padding-block: 0.5rem;
+    justify-content: center;
+}
+.text1, .text2, .text3, .text4 {
+    font-size: 0.8rem;
+}
   .header_image1,
   .header_image2,
   .header_image3,
@@ -315,7 +344,11 @@ p {
 
   .content3 {
     width: 90%;
+    gap: 1rem;
   }
+  .content3 h2 {
+    margin: 0%;
+}
   .box1 a,
   .box2 a,
   .box3 a {
