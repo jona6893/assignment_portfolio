@@ -12,31 +12,76 @@
     <title>Project 3</title>
   </head>
   <body>
-      <header>
-          <a href="index.html#image2"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M24 40 8 24 24 8l2.1 2.1-12.4 12.4H40v3H13.7l12.4 12.4Z" fill="var(--orange)"/></svg>
-          <h1>Responsive</h1></a>
+    <header>
+      <a href="index.html#image2"
+        ><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+          <path
+            d="M24 40 8 24 24 8l2.1 2.1-12.4 12.4H40v3H13.7l12.4 12.4Z"
+            fill="var(--orange)"
+          />
+        </svg>
+        <h1>Responsive</h1></a
+      >
     </header>
     <main>
       <section id="mockups">
         <!-- <img src="images/project1-mockup.webp" alt=""> -->
       </section>
       <section id="visualdetails">
-          <div class="textDetails">
+        <div class="textDetails">
+          <div class="details">
             <h2>Visual Details</h2>
-            <button onclick="window.location.href='https://meritfilm.dk/kea/semester_3/designForDevelopers/13c.02.01.responsive-design/index.html';">Link To Projekt</button>
+            <h4>@Media Query</h4>
+            <p>
+              In order the better make the website responsive the use of media
+              queries allow for specific CSS code at specific Viewport Width.
+            </p>
+            <h4>CSS flex and Grid</h4>
+            <p>
+              Flex and Grid are the building blocks of a websites layout.
+              Utilising them we are able to make the content more flex and
+              responsive to the devices which are used.
+            </p>
+            <h4>Color Palette</h4>
+            <ul class="colors">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+              <li class="color4"></li>
+            </ul>
+          </div>
+          <button
+            onclick="window.location.href='https://meritfilm.dk/kea/semester_3/designForDevelopers/13c.02.01.responsive-design/index.html';"
+          >
+            Link To Projekt
+          </button>
         </div>
         <div class="visualImage"></div>
-    </section>
-    <section id="shorttext">
+      </section>
+      <section id="shorttext">
         <div class="stimage"></div>
-        <div class="st"><p>
-          a short text for each assignment motivating the solution (100 – 200
-          words).
-        </p></div>
+        <div class="st">
+          <h2>The Project</h2>
+          <p>
+            The project involved take a static website and turning it into one
+            which can be used of a wide verity of devices. In order to do this,
+            I had to make sure that the section of the website used ether CSS
+            Flex or CSS grid depending on the use case. Flex is a more
+            responsive layout but does not work all layouts. Grid on the other
+            hand is not a way responsive layout but can be when use the
+            “auto-fit(min-max)” or “auto-fit(min-max)”. To make the text on the
+            site responsive, I decided to use media queries instead of font
+            clamps. This also allowed me to make change to element where as the
+            font clamp would only allow for changes to the font.
+          </p>
+        </div>
       </section>
     </main>
     <footer class="container">
-      <h3>Jonathan Weldon-<br/> Portfolio</h3>
+      <h3>
+        Jonathan Weldon-<br />
+        Portfolio
+      </h3>
       <address>
         <h4>Email</h4>
         <a href="">jonathan@anthonyweldon.com</a>
@@ -44,7 +89,7 @@
         <p>2400, Copenhagen, Denmark</p>
       </address>
     </footer>
-     <div class="progress"></div>
+    <div class="progress"></div>
     <script type="module" src="scrollbar.js"></script>
   </body>
 </html>

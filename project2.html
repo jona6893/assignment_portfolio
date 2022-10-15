@@ -12,32 +12,69 @@
     <title>Project 2</title>
   </head>
   <body>
-      <header>
-          <a href="index.html#image2"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M24 40 8 24 24 8l2.1 2.1-12.4 12.4H40v3H13.7l12.4 12.4Z" fill="var(--orange)"/></svg>
-          <h1>Colors And Animations</h1></a>
+    <header>
+      <a href="index.html#image2"
+        ><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+          <path
+            d="M24 40 8 24 24 8l2.1 2.1-12.4 12.4H40v3H13.7l12.4 12.4Z"
+            fill="var(--orange)"
+          />
+        </svg>
+        <h1>Colors And Animations</h1></a
+      >
     </header>
     <main>
       <section id="mockups">
         <!-- <img src="images/project1-mockup.webp" alt=""> -->
       </section>
       <section id="visualdetails">
-          <div class="textDetails">
+        <div class="textDetails">
+          <div class="details">
             <h2>Visual Details</h2>
-            <button onclick="window.location.href='https://meritfilm.dk/kea/semester_3/designForDevelopers/13c.01.02.colors-and-animations/index.html';">Link To Projekt</button>
-    
+            <h4>Animation Thought Javascript</h4>
+            <p>By assigning CSS animation Keyframes to Javascript Variables allow for a more flexible workflow and allow for more complicated animation.</p>
+            <h4>Darkmode</h4>
+            <p>Using Javascript and CSS we can trigger a change in the websites color theme, by changing data-attributes or css classes.</p>
+            <h4>Color Palette</h4>
+            <ul class="colors">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+          </div>
+          <button
+            onclick="window.location.href='https://meritfilm.dk/kea/semester_3/designForDevelopers/13c.01.02.colors-and-animations/index.html';"
+          >
+            Link To Projekt
+          </button>
         </div>
         <div class="visualImage"></div>
-    </section>
-    <section id="shorttext">
+      </section>
+      <section id="shorttext">
         <div class="stimage"></div>
-        <div class="st"><p>
-          a short text for each assignment motivating the solution (100 – 200
-          words).
-        </p></div>
+        <div class="st">
+          <h2>The Project</h2>
+          <p>
+            In this project we had to take an existing website template, and
+            style the site using a custom color platte, animations and a
+            Darkmode. Using huemint.com I was able to find a palette to my
+            liking, as well as colours which would work with high contrast. In
+            order to check the readability of the color I used Adobe Color
+            Analyser. Using this a could be sure that the palette contrast was
+            readable. With darkmode I add a toggle to the navbar, which when
+            clicked would toggle list of css classes which followed an
+            alternative colorplatte. Although this can be done using
+            data-attribute I decided not to use that route. On the rocket ship
+            image a added an animation which would trigger when hoved over.
+          </p>
+        </div>
       </section>
     </main>
     <footer class="container">
-      <h3>Jonathan Weldon-<br/> Portfolio</h3>
+      <h3>
+        Jonathan Weldon-<br />
+        Portfolio
+      </h3>
       <address>
         <h4>Email</h4>
         <a href="">jonathan@anthonyweldon.com</a>
@@ -45,7 +82,7 @@
         <p>2400, Copenhagen, Denmark</p>
       </address>
     </footer>
-     <div class="progress"></div>
+    <div class="progress"></div>
     <script type="module" src="scrollbar.js"></script>
   </body>
 </html>

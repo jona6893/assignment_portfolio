@@ -299,14 +299,25 @@ p {
 
 footer {
   scroll-snap-align: start;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--black);
+    align-items: center;
 }
-footer p,
-h4 {
+footer h3{
+  color: var(--orange) !important;
+}
+footer p{
   margin: 0%;
   margin-bottom: 1rem;
   color: var(--white) !important;
 }
-
+footer h4{
+  color: var(--white) !important;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
 @media (max-width: 884px) {
   h1 {
     font-size: 1.802rem;
