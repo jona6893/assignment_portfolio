@@ -185,7 +185,7 @@ function ready() {
         ],
       }),
       {
-        target: header1,
+        target: content1,
         offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
       }
     );
@@ -200,7 +200,7 @@ function ready() {
         ],
       }),
       {
-        target: header2,
+        target: content2,
         offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
       }
     );
@@ -215,7 +215,7 @@ function ready() {
         ],
       }),
       {
-        target: header3,
+        target: content3,
         offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
       }
     );
@@ -230,7 +230,7 @@ function ready() {
         ],
       }),
       {
-        target: header4,
+        target: content4,
         offsets: [...ScrollOffset.Enter, ...ScrollOffset.Exit],
       }
     );
